@@ -1,6 +1,6 @@
 # DownloadsDirCleaner
 
-Console application that cleans files from the downloads folder
+Console application that cleans files from the downloads folder of files that hasn't been touched for a while.
 
 ## Usage
 
