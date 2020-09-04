@@ -4,7 +4,7 @@ Console application that cleans files from the downloads folder
 
 ## Usage
 
-`DownloadsDirCleaner -f <PATH_TO_DOWNLOADS_FOLDER>`
+`DownloadsDirCleaner -f <path>`
 
 ## Options
 
