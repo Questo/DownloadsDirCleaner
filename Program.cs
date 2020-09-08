@@ -32,7 +32,7 @@ namespace DownloadsDirCleaner
             {
                 DateTime lastAccessed = File.GetLastAccessTime(file);
 
-                if ((lastAccessed - today).TotalDays <= opts.DaysToKeep)
+                if ((lastAccessed - today).TotalDays >= opts.DaysToKeep)
                     File.Delete(file);
             }
         }
