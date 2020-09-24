@@ -30,9 +30,14 @@ namespace DownloadsDirCleaner
 
             foreach (var file in files)
             {
+                // get the last date this file was accessed
                 DateTime lastAccessed = File.GetLastAccessTime(file);
 
-                if ((lastAccessed - today).TotalDays >= opts.DaysToKeep)
+                // get the number of days that's passed since this file was last accessed
+                int daysSinceAccessed = Convert.ToInt32(Math.Abs((lastAccessed - today).TotalDays));
+
+                // if the file hasn't been touched for the optioned days to keep value, delete the file
+                if (daysSinceAccessed >= opts.DaysToKeep)
                     File.Delete(file);
             }
         }
